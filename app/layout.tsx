@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 //components
 import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -12,11 +14,11 @@ import Header from "@/components/Header";
 //   weight: "100 900",
 // });
 
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -37,10 +39,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetbrainsMono.variable} ${geistMono.variable} antialiased`}
+        className={jetbrainsMono.variable}
       >
         <Header />
-        {children}
+        <StairTransition />
+        <PageTransition>
+          {children}
+        </PageTransition>
+        
       </body>
     </html>
   );
