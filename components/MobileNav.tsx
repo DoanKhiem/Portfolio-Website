@@ -1,6 +1,7 @@
 "use client";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
@@ -21,7 +22,7 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
+        <div className="mt-[10vh] mb-[15vh] text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
               SadboizIT <span className="text-accent">.</span>
@@ -35,16 +36,20 @@ const MobileNav = () => {
               <Link
                 key={index}
                 href={link.path}
-                className={`${
+              >
+                <SheetClose className={`${
                   link.path === pathname &&
                   "text-accent border-b-2 border-accent"
-                } text-xl capitalize hover:text-accent transition-all`}
-              >
+                } text-xl capitalize hover:text-accent transition-all`}>
                 {link.name}
+                </SheetClose>
               </Link>
             );
           })}
         </nav>
+        <Link href="/contact" className="flex justify-center mt-10">
+          <Button>Hire Me</Button>
+        </Link>
       </SheetContent>
     </Sheet>
   );
