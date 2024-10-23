@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
@@ -19,8 +21,7 @@ const Home = () => {
               <span className="text-accent">Sadboiz IT</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-              excepturi.
+              A passionate programmer who loves coding, constantly learning, and enjoys solving complex problems.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -28,7 +29,8 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
-              >
+                onClick={() => alert('Liên hệ với tôi nhé😍')}
+                >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>

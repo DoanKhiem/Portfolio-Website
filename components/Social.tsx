@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
 
 interface SocialProps {
   containerStyles: string;
@@ -8,10 +8,10 @@ interface SocialProps {
 }
 
 const socials = [
-  { icon: <FaGithub />, path: "" },
-  { icon: <FaLinkedin />, path: "" },
-  { icon: <FaTwitter />, path: "" },
-  { icon: <FaYoutube />, path: "" },
+  { icon: <FaGithub />, path: "https://github.com/DoanKhiem" },
+  { icon: <FaFacebook />, path: "https://www.facebook.com/doankhiem1999" },
+  { icon: <FaTiktok />, path: "https://www.tiktok.com/@sadboizit" },
+  { icon: <FaYoutube />, path: "https://www.youtube.com/@SadboizIT" },
 ];
 
 const Social: React.FC<SocialProps> = ({ containerStyles, iconStyles }) => {
@@ -19,7 +19,7 @@ const Social: React.FC<SocialProps> = ({ containerStyles, iconStyles }) => {
     <div className={containerStyles}>
       {socials.map((social, index) => {
         return (
-          <Link key={index} href={social.path} className={iconStyles}>
+          <Link target="_blank" key={index} href={social.path} className={iconStyles}>
             {social.icon}
           </Link>
         );
