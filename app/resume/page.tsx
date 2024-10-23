@@ -4,10 +4,15 @@ import {
     FaHtml5,
     FaCss3,
     FaJs,
+    FaVuejs,
+    FaLaravel,
+    FaPhp,
     FaReact,
     FaFigma,
     FaNodeJs,
 } from "react-icons/fa";
+
+import { SiTypescript, SiNuxtdotjs } from "react-icons/si";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
@@ -19,7 +24,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 //  about data 
 const about = {
     title: "About Me",
-    description: "I am a software developer with 3 years of experience in web development. I have completed 12 projects and mastered 8 technologies. I have made 500 code commits.",
+    description: "I am a software developer with 3 years of experience in web development. I have completed 12 projects and mastered 13 technologies. I have made 500 code commits.",
     info: [
         { fieldName: "Name", fieldValue: "Sadboiz IT" },
         { fieldName: "Experience", fieldValue: "Sadboiz IT" },
@@ -33,9 +38,9 @@ const about = {
 const experience = {
     icon: "/assets/resume/badge.svg",
     title: "My experience",
-    description: "I have 3 years of experience in web development. I have completed 12 projects and mastered 8 technologies. I have made 500 code commits.",
+    description: "I have 3 years of experience in web development. I have completed 12 projects and mastered 8 technologies. I have made >1.200 code commits.",
     items: [
-        { company: "Google", position: "Software Developer", duration: "2019 - 2020" },
+        { company: "Google", position: "Software Developer", duration: "2018 - 2024" },
         { company: "Facebook", position: "Software Developer", duration: "2019 - 2020" },
         { company: "Twitter", position: "Software Developer", duration: "2019 -2024" },
         { company: "Twitter", position: "Software Developer", duration: "2019 -2024" },
@@ -52,21 +57,25 @@ const education = {
     title: "My education",
     description: "I used to study at the University of California, Los Angeles. I have a Bachelor's degree in Computer Science.",
     items: [
-        { institution: "Google", degree: "Software Developer", duration: "2019 - 2020" },
-        { institution: "Google", degree: "Software Developer", duration: "2019 - 2020" },
-        { institution: "Google", degree: "Software Developer", duration: "2019 - 2020" },
-        { institution: "Google", degree: "Software Developer", duration: "2019 - 2020" },
+        { institution: "Information Technology", degree: "Hanoi University of Natural Resources and Environment", duration: "2018 - 2024" },
+        { institution: "PHP FullStack", degree: "BachKhoa Aptech", duration: "2020 - 2021" },
+        
     ]
 }
 
 // skills data
 const skills = {
     title: "My skills",
-    description: "I have mastered 8 technologies. I am proficient in HTML, CSS, JavaScript, React, Figma, Node.js, Tailwind CSS, and Next.js.",
+    description: "I have mastered 13 technologies. I am proficient in HTML, CSS, JavaScript,, TypeScript, Php, Laravel, VueJs, NuxtJs, React, Figma, Node.js, Tailwind CSS, and Next.js.",
     skillList: [
         { name: "HTML", icon: <FaHtml5 /> },
         { name: "CSS", icon: <FaCss3 /> },
         { name: "JavaScript", icon: <FaJs /> },
+        { name: "TypeScript", icon: <SiTypescript /> },
+        { name: "Vue.js", icon: <FaVuejs /> },
+        { name: "Laravel", icon: <FaLaravel /> },
+        { name: "Php", icon: <FaPhp /> },
+        { name: "Nuxt.js", icon: <SiNuxtdotjs /> },
         { name: "React", icon: <FaReact /> },
         { name: "Figma", icon: <FaFigma /> },
         { name: "Node.js", icon: <FaNodeJs /> },
