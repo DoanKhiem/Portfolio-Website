@@ -11,12 +11,12 @@ const info = [
     {
         icon: <FaPhoneAlt />,
         title: "Phone",
-        value: "+1234567890",
+        value: "+84 977 455 275",
     },
     {
         icon: <FaEnvelope />,
         title: "Email",
-        value: "youemail@gmail.com",
+        value: "khiembi161219@gmail.com",
     },
     {
         icon: <FaMapMarkedAlt />,
