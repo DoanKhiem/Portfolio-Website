@@ -26,11 +26,11 @@ const about = {
     title: "About Me",
     description: "I am a software developer with 3 years of experience in web development. I have completed 12 projects and mastered 13 technologies. I have made 500 code commits.",
     info: [
-        { fieldName: "Name", fieldValue: "Sadboiz IT" },
-        { fieldName: "Experience", fieldValue: "Sadboiz IT" },
-        { fieldName: "Skype", fieldValue: "Sadboiz IT" },
-        { fieldName: "Telegram", fieldValue: "Sadboiz IT" },
-        { fieldName: "Tiktok", fieldValue: "Sadboiz IT" },
+        { fieldName: "Name", fieldValue: "Đoàn Khiêm", link: "#" },
+        { fieldName: "Experience", fieldValue: "3 years", link: "#" },
+        { fieldName: "Skype", fieldValue: "Đoàn Khiêm", link: "https://join.skype.com/invite/xTe25mkE02yl" },
+        { fieldName: "Telegram", fieldValue: "@devbi19", link: "#" },
+        { fieldName: "Tiktok", fieldValue: "Sadboiz IT", link: "https://www.tiktok.com/@sadboizit" },
     ]
 }
 
@@ -40,14 +40,10 @@ const experience = {
     title: "My experience",
     description: "I have 3 years of experience in web development. I have completed 12 projects and mastered 8 technologies. I have made >1.200 code commits.",
     items: [
-        { company: "Google", position: "Software Developer", duration: "2018 - 2024" },
-        { company: "Facebook", position: "Software Developer", duration: "2019 - 2020" },
-        { company: "Twitter", position: "Software Developer", duration: "2019 -2024" },
-        { company: "Twitter", position: "Software Developer", duration: "2019 -2024" },
-        { company: "Twitter", position: "Software Developer", duration: "2019 -2024" },
-        { company: "Twitter", position: "Software Developer", duration: "2019 -2024" },
-        { company: "Twitter", position: "Software Developer", duration: "2019 -2024" },
-        { company: "Twitter", position: "Software Developer", duration: "2019 -2024" },
+        { company: "Commude Vietnam Co., LTD", position: "INTERN Php + Vuejs", duration: "11/2021 - 01/2022" },
+        { company: "Everflow Company", position: "Fresher Laravel + VueJs", duration: "01/2022 - 03/2022" },
+        { company: "Brite Solutions .,JSC ", position: "Developer Laravel + VueJs", duration: "03/2022 - 11/2022" },
+        { company: "Townsoft Vina LTD", position: "Developer VueJs", duration: "11/2022 - Now" },
     ]
 }
 
@@ -55,7 +51,7 @@ const experience = {
 const education = {
     icon: "/assets/resume/cap.svg",
     title: "My education",
-    description: "I used to study at the University of California, Los Angeles. I have a Bachelor's degree in Computer Science.",
+    description: "I used to study at the Hanoi University of Natural Resources and Environment. I have a degree in Information Technology Engineering",
     items: [
         { institution: "Information Technology", degree: "Hanoi University of Natural Resources and Environment", duration: "2018 - 2024" },
         { institution: "PHP FullStack", degree: "BachKhoa Aptech", duration: "2020 - 2021" },
@@ -191,7 +187,11 @@ const Resume = () => {
                                         return (
                                             <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
                                                 <span className="text-white/60">{item.fieldName}:</span>
-                                                <p className="text-xl">{item.fieldValue}</p>
+                                                {item.link !== "#" ? (
+                                                    <a href={item.link} className="text-xl">{item.fieldValue}</a>
+                                                ) : (
+                                                    <p className="text-xl">{item.fieldValue}</p>
+                                                )}
                                             </li>
                                         )
                                     })}
